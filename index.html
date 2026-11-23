@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- ================= NAVBAR ================= -->
+
+<header class="header">
+
+    <div class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            GEAR<span>GO</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="adventures.html">Adventures</a>
+            <a href="gear.html">Gear</a>
+            <!-- <a href="deals.html">Deals</a> -->
+            <a href="about.html">About</a>
+        </nav>
+
+        <div class="nav-actions">
+
+         <button class="nav-icon" id="searchBtn" type="button" title="Search">⌕</button>
+
+         <button class="nav-icon" id="cartBtn" type="button" title="Rental Cart">🛒      
+         <span id="cartCount">0</span>
+         </button>
+
+         <a href="login.html" class="login-btn">Login</a>
+
+        </div>
+
+        <div class="search-box" id="searchBox">
+         <input type="text" id="searchInput" placeholder="Search outdoor gear...">
+         <button type="button" id="closeSearch">✕</button>
+        </div>
+        
+<!-- RENTAL CART -->
+        <div class="cart-overlay" id="cartOverlay">
+          <div class="cart-panel">
+            <div class="cart-header">
+             <h2>Your Rental Cart</h2>
+             <button type="button" id="closeCart">✕</button>
+           </div>
+
+        <div id="cartItems">
+            <p>Your cart is empty. Choose some gear!</p>
+        </div>
+
+        <div class="cart-total">
+            Total per day: <span id="cartTotal">₹0</span>
+        </div>
+    </div>
+   </div>
+
+    </div>
+
+</header>
+
+
+
+
+<section class="hero" id="home">
+
+    <div class="hero-background">
+        <img src="adventure-1.jpg" alt="Adventure camping in the mountains">
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-subtitle">
+            <span></span>
+            YOUR ADVENTURE BEGINS HERE
+        </p>
+
+        <h1>
+            FIND YOUR NEXT<br>
+            GREAT <span>ESCAPE.</span>
+        </h1>
+
+        <p class="hero-description">
+            Explore the outdoors, discover new destinations
+            and experience freedom with premium adventure
+            equipment available for rent.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="gear.html" class="hero-btn">
+                EXPLORE GEAR <span>→</span>
+            </a>
+
+            <a href="adventures.html" class="hero-secondary-btn">
+                DISCOVER ADVENTURES
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-bottom">
+        <span>GEARGO — RENT. EXPLORE. REPEAT.</span>
+        <span>THE OUTDOORS IS CALLING ↓</span>
+    </div>
+
+</section>
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+
+            <div class="logo">
+                GEAR<span>GO</span>
+            </div>
+
+            <p>
+                Rent the gear.<br>
+                Take the adventure.
+            </p>
+
+        </div>
+
+
+        <!-- Explore -->
+        <div class="footer-column">
+
+            <h3>Explore</h3>
+
+            <a href="#">Adventures</a>
+            <a href="#">Camping Gear</a>
+            <a href="#">Trekking Gear</a>
+            <a href="#">Photography Gear</a>
+
+        </div>
+
+
+        <!-- Company -->
+        <div class="footer-column">
+
+            <h3>Company</h3>
+
+            <a href="#">About Us</a>
+            <a href="#">How It Works</a>
+            <a href="#">Contact</a>
+            <a href="#">FAQs</a>
+
+        </div>
+
+
+        <!-- Social -->
+        <div class="footer-column">
+
+            <h3>Follow Us</h3>
+
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+
+        <p>© 2026 GearGo. All Rights Reserved.</p>
+
+        <p>Made for adventure seekers.</p>
+
+    </div>
+
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

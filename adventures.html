@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <!-- ================= NAVBAR ================= -->
+
+<header class="header adventure-header">
+
+    <div class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            GEAR<span>GO</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="adventures.html">Adventures</a>
+            <a href="gear.html">Gear</a>
+            <!-- <a href="deals.html">Deals</a> -->
+            <a href="about.html">About</a>
+        </nav>
+
+        
+        <div class="nav-actions">
+
+         <button class="nav-icon" id="searchBtn" type="button" title="Search">⌕</button>
+
+         <button class="nav-icon" id="cartBtn" type="button" title="Rental Cart">🛒      
+         <span id="cartCount">0</span>
+         </button>
+
+         <a href="login.html" class="login-btn">Login</a>
+
+        </div>
+
+        <div class="search-box" id="searchBox">
+         <input type="text" id="searchInput" placeholder="Search outdoor gear...">
+         <button type="button" id="closeSearch">✕</button>
+        </div>
+        
+<!-- RENTAL CART -->
+        <div class="cart-overlay" id="cartOverlay">
+          <div class="cart-panel">
+            <div class="cart-header">
+             <h2>Your Rental Cart</h2>
+             <button type="button" id="closeCart">✕</button>
+           </div>
+
+        <div id="cartItems">
+            <p>Your cart is empty. Choose some gear!</p>
+        </div>
+
+        <div class="cart-total">
+            Total per day: <span id="cartTotal">₹0</span>
+        </div>
+    </div>
+   </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     ADVENTURE HERO
+========================= -->
+
+<section class="adventure-hero">
+
+    <div class="adventure-hero-content">
+
+        <p class="adventure-subtitle">
+            EXPLORE MORE
+        </p>
+
+        <h1>
+            CHOOSE YOUR
+            <span>ADVENTURE.</span>
+        </h1>
+
+        <p class="adventure-description">
+            From peaceful camping trips to challenging trails,
+            find the right gear for every journey.
+        </p>
+
+        <a href="gear.html" class="adventure-btn">
+            Explore Gear →
+        </a>
+
+    </div>
+
+    <div class="adventure-hero-image">
+
+        <img src="camping.jpg"
+             alt="Adventure">
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =========================
+     EXPLORE ADVENTURES
+========================= -->
+
+<section class="adventures">
+
+    <div class="section-heading">
+
+        <p>OUR ADVENTURES</p>
+
+        <h2>EXPLORE ADVENTURES</h2>
+
+        <span>
+            Choose your adventure and find the perfect gear to make it happen.
+        </span>
+
+    </div>
+
+
+    <div class="adventure-container">
+
+
+        <!-- CAMPING -->
+
+        <div class="adventure-card">
+
+            <img src="camping2.jpg"
+                 alt="Camping adventure">
+
+            <div class="adventure-card-content">
+
+                <h3>CAMPING</h3>
+
+                <p>
+                    Sleep under the stars and escape the city.
+                </p>
+
+                <small>
+                    Tents • Sleeping Bags • Camp Lights
+                </small>
+
+                <a href="gear.html">
+                    Explore Camping →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- TREKKING -->
+
+        <div class="adventure-card">
+
+            <img src="trekking2.jpg"
+                 alt="Trekking adventure">
+
+            <div class="adventure-card-content">
+
+                <h3>TREKKING</h3>
+
+                <p>
+                    Take on new trails and explore higher.
+                </p>
+
+                <small>
+                    Backpacks • Trekking Poles • Hiking Gear
+                </small>
+
+                <a href="gear.html">
+                    Explore Trekking →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HIKING -->
+
+        <div class="adventure-card">
+
+            <img src="hiking.jpg"
+                 alt="Hiking adventure">
+
+            <div class="adventure-card-content">
+
+                <h3>HIKING</h3>
+
+                <p>
+                    Explore nature one step at a time.
+                </p>
+
+                <small>
+                    Hiking Backpacks • Shoes • Accessories
+                </small>
+
+                <a href="gear.html">
+                    Explore Hiking →
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY CHOOSE GEARGO
+========================= -->
+
+<section class="why-geargo">
+
+    <div class="section-heading">
+
+        <p>WHY CHOOSE GEARGO</p>
+
+        <h2>GEAR UP FOR A BETTER ADVENTURE</h2>
+
+    </div>
+
+
+    <div class="why-container">
+
+
+        <div class="why-card">
+
+            <div class="why-icon">◇</div>
+
+            <h3>Quality Gear</h3>
+
+            <p>
+                Reliable and well-maintained equipment.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">⚙</div>
+
+            <h3>Easy Rental</h3>
+
+            <p>
+                Simple and hassle-free rental process.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">▣</div>
+
+            <h3>Flexible Plans</h3>
+
+            <p>
+                Rent for a day, weekend or longer.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">△</div>
+
+            <h3>Adventure Ready</h3>
+
+            <p>
+                Everything you need to get outside.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="adventure-cta">
+
+    <div class="cta-content">
+
+        <p>READY TO GO?</p>
+
+        <h2>
+            YOUR NEXT ADVENTURE IS WAITING.
+        </h2>
+
+        <span>
+            Choose your adventure. We'll handle the gear.
+        </span>
+
+        <a href="gear.html" class="adventure-btn">
+            Explore Gear →
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+
+            <div class="logo">
+                GEAR<span>GO</span>
+            </div>
+
+            <p>
+                Rent the gear.<br>
+                Take the adventure.
+            </p>
+
+        </div>
+
+
+        <!-- Explore -->
+        <div class="footer-column">
+
+            <h3>Explore</h3>
+
+            <a href="#">Adventures</a>
+            <a href="#">Camping Gear</a>
+            <a href="#">Trekking Gear</a>
+            <a href="#">Photography Gear</a>
+
+        </div>
+
+
+        <!-- Company -->
+        <div class="footer-column">
+
+            <h3>Company</h3>
+
+            <a href="#">About Us</a>
+            <a href="#">How It Works</a>
+            <a href="#">Contact</a>
+            <a href="#">FAQs</a>
+
+        </div>
+
+
+        <!-- Social -->
+        <div class="footer-column">
+
+            <h3>Follow Us</h3>
+
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+
+        <p>© 2026 GearGo. All Rights Reserved.</p>
+
+        <p>Made for adventure seekers.</p>
+
+    </div>
+
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

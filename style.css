@@ -1,0 +1,1242 @@
+
+/* =========================================
+   GEARGO - MAIN STYLESHEET
+========================================= */
+
+/* GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f0;
+    color: #1d241f;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+a {
+    transition: all 0.3s ease;
+}
+
+
+/* =========================================
+   COMMON NAVBAR
+========================================= */
+
+.header {
+    width: 100%;
+    background: #172019;
+    color: white;
+    position: relative;
+    z-index: 100;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1400px;
+    min-height: 85px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #c6a15b;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    position: relative;
+    color: white;
+    font-size: 14px;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #c6a15b;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c6a15b;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-icon {
+    position: relative;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-icon:hover {
+    color: #c6a15b;
+}
+
+#cartCount {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #c6a15b;
+    color: #172019;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+.login-btn {
+    display: inline-block;
+    padding: 11px 22px;
+    background: #c6a15b;
+    color: #172019;
+    font-size: 14px;
+    border: 1px solid #c6a15b;
+    border-radius: 4px;
+}
+
+.login-btn:hover {
+    background: transparent;
+    color: #c6a15b;
+}
+
+
+/* SEARCH */
+
+.search-box {
+    display: none;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 15px;
+    gap: 10px;
+}
+
+.search-box.show {
+    display: flex;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #c6a15b;
+    outline: none;
+}
+
+.search-box button {
+    padding: 0 14px;
+    border: none;
+    background: #c6a15b;
+    color: #172019;
+    cursor: pointer;
+}
+
+
+/* CART */
+
+.cart-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+
+.cart-overlay.show {
+    display: block;
+}
+
+.cart-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 380px;
+    max-width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background: #f5f5f0;
+    padding: 25px;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.cart-header h2 {
+    font-size: 22px;
+    color: #172019;
+}
+
+.cart-header button,
+.remove-item {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cart-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #d8d9cf;
+}
+
+.cart-item h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.cart-item p {
+    color: #5d645f;
+    font-size: 14px;
+}
+
+.remove-item {
+    color: #9b3d32;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.cart-total {
+    margin-top: 25px;
+    font-weight: bold;
+    color: #172019;
+}
+
+
+/* =========================================
+   HOMEPAGE
+========================================= */
+
+.hero {
+    padding: 70px 0;
+}
+
+.hero-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+    width: 45%;
+}
+
+.hero-subtitle {
+    color: #c6a15b;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    color: #172019;
+    font-size: 58px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero-text h1 span {
+    color: #c6a15b;
+}
+
+.hero-description {
+    max-width: 500px;
+    margin-bottom: 30px;
+    color: #5d645f;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #172019;
+    border: 1px solid #172019;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    background: #c6a15b;
+    border-color: #c6a15b;
+    color: #172019;
+}
+
+.hero-carousel {
+    width: 55%;
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.next-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #172019;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.next-btn:hover {
+    background: #c6a15b;
+}
+
+
+/* =========================================
+   ADVENTURES PAGE
+========================================= */
+
+.adventure-hero {
+    height: 445px;
+    position: relative;
+    overflow: hidden;
+}
+
+.adventure-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.adventure-hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.adventure-hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.adventure-hero-content {
+    width: 100%;
+    padding: 100px 0 0 8%;
+    position: relative;
+    z-index: 2;
+}
+
+.adventure-subtitle {
+    color: #e2bd77;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.adventure-hero h1 {
+    color: white;
+    font-size: 58px;
+    line-height: 1.1;
+    margin: 18px 0;
+}
+
+.adventure-hero h1 span {
+    display: block;
+    color: #e2bd77;
+}
+
+.adventure-description {
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 480px;
+    margin-bottom: 25px;
+}
+
+.adventure-btn {
+    display: inline-block;
+    background: #c6a15b;
+    color: white;
+    padding: 14px 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.adventure-btn:hover {
+    background: #172019;
+    transform: translateY(-2px);
+}
+
+.adventure-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+}
+
+.adventure-header .logo,
+.adventure-header .nav-links a,
+.adventure-header .nav-icon {
+    color: white;
+}
+
+.adventure-header .login-btn {
+    background: transparent;
+    color: #c6a15b;
+}
+
+
+/* =========================================
+   GEAR PAGE
+========================================= */
+
+.gear-page .gear-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 85px;
+    background: transparent !important;
+    z-index: 1000;
+}
+
+.gear-page .gear-header .navbar {
+    background: transparent !important;
+}
+
+.gear-page .gear-header .logo,
+.gear-page .gear-header .nav-links a,
+.gear-page .gear-header .nav-icon {
+    color: white !important;
+}
+
+.gear-page .gear-header .login-btn {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+/* Gear hero - same height as Adventures */
+
+.gear-page .adventure-hero {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 445px;
+    min-height: 445px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    isolation: isolate;
+    background: #222;
+}
+
+.gear-page .adventure-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.gear-page .adventure-hero-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.gear-page .adventure-hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.42);
+}
+
+.gear-page .adventure-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    width: 55%;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.gear-page .adventure-hero-content h1 {
+    color: white;
+}
+
+.gear-page .adventure-hero-content p {
+    color: white;
+}
+
+
+/* =========================================
+   GEAR PRODUCTS
+========================================= */
+
+.gear {
+    padding: 45px 0;
+}
+
+.gear-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.gear-card {
+    width: calc(25% - 19px);
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gear-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(23,32,25,0.10);
+}
+
+.gear-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.gear-card:hover img {
+    transform: scale(1.05);
+}
+
+.gear-content {
+    padding: 18px;
+}
+
+.gear-content h3 {
+    color: #172019;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #172019;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.price span {
+    color: #777;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.rating {
+    color: #666;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.rent-btn {
+    display: block;
+    margin-top: 15px;
+    padding: 11px;
+    background: #c6a15b;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.rent-btn:hover {
+    background: #172019;
+}
+
+
+/* =========================================
+   ABOUT PAGE
+   Preserved for existing about.html
+========================================= */
+
+.about-story {
+    width: 88%;
+    max-width: 1150px;
+    margin: auto;
+    padding: 45px 0;
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.about-story-image {
+    width: 58%;
+}
+
+.about-story-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about-story-content {
+    flex: 1;
+}
+
+.about-subtitle {
+    color: #c6a15b;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.about-story-content h2 {
+    color: #172019;
+    font-size: 34px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.about-story-content p:not(.about-subtitle) {
+    color: #5d645f;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.how-geargo {
+    padding: 40px 0;
+    background: #e9ebdf;
+}
+
+.how-container {
+    width: 88%;
+    max-width: 1150px;
+    margin: 30px auto 0;
+    display: flex;
+    gap: 20px;
+}
+
+.how-card {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background: transparent;
+    transition: transform 0.3s ease;
+}
+
+.how-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-icon {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f0;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.how-card:hover .step-icon {
+    background: #c6a15b;
+    transform: scale(1.08);
+}
+
+.step-icon svg {
+    width: 30px;
+    height: 30px;
+    fill: none;
+    stroke: #172019;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.how-card h3 {
+    color: #172019;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.how-card p {
+    color: #5d645f;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.about-benefits {
+    padding: 40px 0 50px;
+    background: #f5f5f0;
+}
+
+.benefits-container {
+    width: 88%;
+    max-width: 1150px;
+    margin: 25px auto 0;
+    display: flex;
+}
+
+.benefit-card {
+    flex: 1;
+    padding: 10px 18px;
+    text-align: center;
+    background: transparent;
+    border-right: 1px solid #d8d9cf;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:last-child {
+    border-right: none;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    color: #c6a15b;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.benefit-card h3 {
+    color: #172019;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.benefit-card p {
+    color: #5d645f;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   ADVENTURES CARDS
+========================================= */
+
+.adventures {
+    padding: 60px 0;
+}
+
+.section-heading {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: #172019;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.section-heading span {
+    color: #5d645f;
+}
+
+.adventure-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 25px;
+}
+
+.adventure-card {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.adventure-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(23,32,25,0.12);
+}
+
+.adventure-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.adventure-card-content {
+    padding: 20px;
+}
+
+.adventure-card h3 {
+    color: #172019;
+    margin-bottom: 10px;
+}
+
+.adventure-card p {
+    color: #5d645f;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.adventure-card small {
+    display: block;
+    color: #8a918c;
+    margin-bottom: 15px;
+}
+
+.adventure-card a {
+    color: #c6a15b;
+    font-weight: bold;
+}
+
+
+/* WHY GEAR GO */
+
+.why-geargo {
+    padding: 60px 0;
+}
+
+.why-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.why-card {
+    flex: 1;
+    padding: 20px;
+}
+
+.why-icon {
+    color: #c6a15b;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.why-card h3 {
+    color: #172019;
+    margin-bottom: 8px;
+}
+
+.why-card p {
+    color: #5d645f;
+    line-height: 1.5;
+}
+
+
+/* ADVENTURE CTA */
+
+.adventure-cta {
+    padding: 80px 20px;
+    background: url("adventure-cta.jpg") center/cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+}
+
+.cta-content h2 {
+    font-size: 38px;
+    margin: 12px 0;
+}
+
+.cta-content span {
+    display: block;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   COMMON FOOTER
+========================================= */
+
+.footer {
+    margin-top: 80px;
+    background: darkslategray;
+    color: beige;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-brand {
+    max-width: 250px;
+}
+
+.footer-brand p {
+    margin-top: 15px;
+    color: #a9b0aa;
+    line-height: 1.7;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-column h3 {
+    margin-bottom: 8px;
+    color: #c6a15b;
+    font-size: 16px;
+}
+
+.footer-column a {
+    color: #a9b0aa;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: #c6a15b;
+    transform: translateX(4px);
+}
+
+.footer-bottom {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+    border-top: 1px solid #354039;
+    display: flex;
+    justify-content: space-between;
+    color: #8f9891;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .gear-card {
+        width: calc(33.333% - 17px);
+    }
+
+    .hero-container {
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    .adventure-container {
+        flex-wrap: wrap;
+    }
+
+    .adventure-card {
+        flex: 1 1 45%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 18px;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-text,
+    .hero-carousel {
+        width: 100%;
+    }
+
+    .hero-carousel {
+        height: 350px;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .adventure-hero {
+        height: 500px;
+    }
+
+    .adventure-hero-content {
+        padding: 100px 7% 0;
+    }
+
+    .adventure-hero h1 {
+        font-size: 40px;
+    }
+
+    /* Gear follows the same responsive hero height */
+    .gear-page .adventure-hero {
+        height: 500px;
+        min-height: 500px;
+    }
+
+    .gear-page .adventure-hero-content {
+        left: 7%;
+        width: 86%;
+    }
+
+    .gear-page .adventure-hero h1 {
+        font-size: 40px;
+    }
+
+    .about-story {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about-story-image {
+        width: 100%;
+    }
+
+    .how-container {
+        flex-wrap: wrap;
+    }
+
+    .how-card {
+        flex: 1 1 40%;
+    }
+
+    .benefits-container {
+        flex-wrap: wrap;
+    }
+
+    .benefit-card {
+        flex: 1 1 40%;
+        border-right: none;
+    }
+
+    .adventure-container {
+        flex-direction: column;
+    }
+
+    .gear-card {
+        width: calc(50% - 13px);
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 35px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .login-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .hero-carousel {
+        height: 280px;
+    }
+
+    .adventure-hero {
+        height: 460px;
+    }
+
+    .adventure-hero h1 {
+        font-size: 34px;
+    }
+
+    .gear-page .adventure-hero {
+        height: 460px;
+        min-height: 460px;
+    }
+
+    .gear-page .adventure-hero h1 {
+        font-size: 34px;
+    }
+
+    .gear-card {
+        width: 100%;
+    }
+
+    .how-card,
+    .benefit-card {
+        flex: 1 1 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* ACCESSIBILITY */
+
+::selection {
+    background: #c6a15b;
+    color: #172019;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c6a15b;
+    border-radius: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* ABOUT PAGE NAVBAR OVER HERO */
+
+body:has(.about-story) .adventure-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent !important;
+    z-index: 1000;
+}
+
+body:has(.about-story) .adventure-header .navbar {
+    background: transparent !important;
+}
+
+body:has(.about-story) .adventure-header .logo,
+body:has(.about-story) .adventure-header .nav-links a,
+body:has(.about-story) .adventure-header .nav-icon {
+    color: white !important;
+}
